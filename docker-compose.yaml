@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   grafanator:
-    build: .
+    image: ghcr.io/maximtar/grafanator:latest
     env_file:
       - .env
     ports:
