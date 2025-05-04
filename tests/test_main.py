@@ -2,8 +2,15 @@ from unittest.mock import patch
 
 import pytest
 
-with patch("contact_point.create_contact_point", return_value=None), patch(
-    "folder.create_folder", return_value="mock-folder-uid"
+with (
+    patch("contact_point.create_contact_point", return_value=None),
+    patch("folder.create_folder", return_value="mock-folder-uid"),
+    patch("policy.create_notification_policy", return_value=None),
+    patch("policy.clear_all_notification_policies", return_value=None),
+    patch("alert.clear_all_alert_rules", return_value=None),
+    patch("contact_point.clear_all_contact_points", return_value=None),
+    patch("dashboard.clear_all_dashboards", return_value=None),
+    patch("data_source.clear_all_data_sources", return_value=None),
 ):
     from main import application
 

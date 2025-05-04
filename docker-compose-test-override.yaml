@@ -3,6 +3,6 @@ version: "3.8"
 services:
   grafanator:
     env_file:
-      - .env
+      - .env.template
     working_dir: /app
     command: pytest tests

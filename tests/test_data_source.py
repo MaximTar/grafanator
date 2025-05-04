@@ -4,6 +4,7 @@ from config import config
 from data_source import create_data_source
 
 NODE_NAME = "node-1"
+NODE_PORT = "6666"
 
 
 def test_create_data_source_success():
@@ -13,7 +14,7 @@ def test_create_data_source_success():
 
         mock_post.return_value = MagicMock(status_code=200)
 
-        response = create_data_source(NODE_NAME)
+        response = create_data_source(NODE_NAME, NODE_PORT)
         assert response.status_code == 200
         mock_post.assert_called_once()
 
@@ -30,7 +31,7 @@ def test_create_data_source_conflict_and_retry():
 
         mock_post.side_effect = [MagicMock(status_code=409), MagicMock(status_code=200)]
 
-        response = create_data_source(NODE_NAME)
+        response = create_data_source(NODE_NAME, NODE_PORT)
         assert response.status_code == 200
         assert mock_post.call_count == 2
         mock_delete.assert_called_once()
