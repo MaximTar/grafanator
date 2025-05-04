@@ -1,6 +1,6 @@
 # Grafanator
 
-[![CI](https://github.com/maximtar/grafanator/actions/workflows/test.yml/badge.svg)](https://github.com/your-org/grafanator/actions) 
+[![CI](https://github.com/maximtar/grafanator/actions/workflows/test.yml/badge.svg)](https://github.com/maximtar/grafanator/actions) 
 [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
