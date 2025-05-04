@@ -111,7 +111,7 @@ Make sure the following env vars are set in your `.env` file or via Docker:
 
 To run tests:
 ```bash
-docker compose -f docker-compose.yaml -f docker-compose-test-override.yaml up --build
+docker compose -f docker-compose.test.yaml up --build
 ```
 
 ---

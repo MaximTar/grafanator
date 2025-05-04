@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   grafanator:
+    build: .
     env_file:
       - .env.template
     working_dir: /app
