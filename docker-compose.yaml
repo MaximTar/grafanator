@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  grafanator:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "${SERVICE_PORT}:${SERVICE_PORT}"
+    volumes:
+      - ./src:/app/src
+    working_dir: /app/src
+    command: gunicorn --bind 0.0.0.0:${SERVICE_PORT} src.main:application

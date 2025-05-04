@@ -1,0 +1,8 @@
+[tool.black]
+line-length = 119
+exclude = '''
+(
+  venv
+  | src/config/config\.py
+)
+'''

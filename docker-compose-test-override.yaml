@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  grafanator:
+    env_file:
+      - .env
+    working_dir: /app
+    command: pytest tests
